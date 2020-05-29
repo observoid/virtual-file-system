@@ -1,0 +1,38 @@
+{
+  "name": "@observoid/virtual-file-system",
+  "version": "0.1.0",
+  "description": "Generic file system mechanisms built on RxJS observable streams.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/observoid/virtual-file-system.git"
+  },
+  "keywords": [],
+  "author": "Duncan Cross",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/observoid/virtual-file-system/issues"
+  },
+  "homepage": "https://github.com/observoid/virtual-file-system#readme",
+  "devDependencies": {
+    "@types/jest": "^25.2.3",
+    "jest": "^26.0.1",
+    "ts-jest": "^26.0.0",
+    "typescript": "^3.9.3"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "dependencies": {
+    "rxjs": "^6.5.5"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  }
+}
