@@ -6,7 +6,8 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "test": "ts-node ./node_modules/pta/src/cli.js src/**/*.test.ts",
+    "pretest": "npm run build",
+    "test": "c8 -r json -r text ts-node ./node_modules/pta/src/cli.js src/**/*.test.ts",
     "prepublishOnly": "npm run build"
   },
   "repository": {
@@ -22,6 +23,7 @@
   "homepage": "https://github.com/observoid/virtual-file-system#readme",
   "devDependencies": {
     "@types/jest": "^25.2.3",
+    "c8": "^7.1.2",
     "pta": "^0.1.3",
     "ts-jest": "^26.0.0",
     "ts-node": "^8.10.2",
@@ -29,7 +31,8 @@
     "zora": "^3.1.9"
   },
   "files": [
-    "lib/**/*"
+    "lib/**/*.js",
+    "lib/**/*.d.ts"
   ],
   "dependencies": {
     "rxjs": "^6.5.5"
